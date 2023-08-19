@@ -3,6 +3,10 @@
 #build image
 
 ## Script should be executed from the repo main dir
+
+## To point your shell to minikube's docker-daemon
+eval $(minikube -p minikube docker-env)
+
 #build webserver image
 docker build -t infra-task .
 
