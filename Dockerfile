@@ -1,6 +1,8 @@
 # python base image
 FROM python:3.9-slim
 
+RUN mkdir -p /app
+
 # Set the container's working directory
 WORKDIR /app
 
