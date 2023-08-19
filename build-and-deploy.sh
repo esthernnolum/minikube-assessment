@@ -1,10 +1,17 @@
 #!/bin/bash
 # bash script that builds, packages and deploys the python apllication aslo take care of configuring the minikube cluster, and ensuring the webserver endpoint is available.
 #build image
+
+git clone https://github.com/esthernnolum/minikube-assessment.git
+
+cd minikube-assessment
+
 docker build -t infra-task .
 
 # start Minikube
 minikube start
+
+minikube addons enable ingress
 
 # set Minikube context
 kubectl config use-context minikube
