@@ -2,10 +2,8 @@
 # bash script that builds, packages and deploys the python apllication aslo take care of configuring the minikube cluster, and ensuring the webserver endpoint is available.
 #build image
 
-git clone https://github.com/esthernnolum/minikube-assessment.git
-
-cd minikube-assessment
-
+## Script should be executed from the repo main dir
+#build webserver image
 docker build -t infra-task .
 
 # start Minikube
