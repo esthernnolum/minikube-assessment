@@ -18,12 +18,10 @@ kubectl config use-context minikube
 kubectl apply -f webserver.yml
 
 # Wait for the deployment to be ready
-kubectl rollout status deployment/webserver
+kubectl rollout status deployment/webserver-deploy
 
 # Add Ingress host to /etc/hosts
 echo "$(minikube ip) bar.local" | sudo tee -a /etc/hosts
 
 echo "Webserver deployed at http://bar.local/foo and can be accessed from your browser"
 
-# Open the deployed URL in a web browser (Linux only)
-xdg-open http://bar.local/foo
