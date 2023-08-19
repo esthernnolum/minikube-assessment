@@ -18,7 +18,7 @@ kubectl config use-context minikube
 kubectl apply -f webserver.yml
 
 # Wait for the deployment to be ready
-kubectl rollout status deployment/web-server
+kubectl rollout status deployment/webserver
 
 # Add Ingress host to /etc/hosts
 echo "$(minikube ip) bar.local" | sudo tee -a /etc/hosts
