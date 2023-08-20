@@ -13,15 +13,15 @@ I've used SkyBlue here as my favourite colour in the code
 
 ### Follow the steps below to deploy (This assumes that minikube is already installed and configured with a working default driver)
 
-### clone this repository on the minikube using the command below
+### a. clone this repository on the minikube using the command below
 ```
 git clone https://github.com/esthernnolum/minikube-assessment.git
 ```
-### cd into the repo
+### b. cd into the repo
 ```
 cd minikube-assessment
 ```
-### run the build-and-deploy.sh script
+### c. run the build-and-deploy.sh script
 ```
 ./build-and-deploy.sh
 ```
