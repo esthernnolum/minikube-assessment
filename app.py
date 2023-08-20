@@ -1,4 +1,4 @@
-# pthon task that only accepts GET requests on the path "/foo" and returns a JSON response
+# pthon webserver that only accepts GET requests on the path "/foo" and returns a JSON response
 from flask import Flask, jsonify
 
 app = Flask(__name__)
