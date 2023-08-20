@@ -18,6 +18,9 @@ minikube addons enable ingress
 # set Minikube context
 kubectl config use-context minikube
 
+# disable validation for servers that have ingress nginx controller has the validating webhook enabled
+kubectl delete -A ValidatingWebhookConfiguration ingress-nginx-admission
+
 # apply the Kubernetes manifest to deploy
 kubectl apply -f webserver.yml
 
@@ -26,6 +29,5 @@ kubectl rollout status deployment/webserver-deploy
 
 # Add Ingress host to /etc/hosts
 echo "$(minikube ip) bar.local" | sudo tee -a /etc/hosts
-
+curl http://bar.local/foo
 echo "Webserver deployed at http://bar.local/foo and can be accessed from your browser"
-
