@@ -25,4 +25,6 @@ cd minikube-assessment
 ```
 ./build-and-deploy.sh
 ```
+### d. Webserver is deployed and can be accessed from http://bar.local/foo
+
 I've added comments to various portions of the scripts/code to help in understanding what was done.
