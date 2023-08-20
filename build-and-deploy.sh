@@ -29,5 +29,9 @@ kubectl rollout status deployment/webserver-deploy
 
 # Add Ingress host to /etc/hosts
 echo "$(minikube ip) bar.local" | sudo tee -a /etc/hosts
+
+# sleep for 10 seconds
+sleep 10s
+
 curl http://bar.local/foo
-echo "Webserver deployed at http://bar.local/foo and can be accessed from your browser"
+echo "Webserver is deployed and can be accessed from http://bar.local/foo"
